@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact List</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+
+      <h1 class="text-center">Contact List</h1>
+
+    </div>
+
+    <div class="row">
+
+      <!-- Button trigger modal -->
+      <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModalNorm">
+        Launch Contact Form
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
+      aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" 
+            data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            Contact Details
+          </h4>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+
+          <form class="form-group" id='newTodoForm'>
+            <div class="form-group">
+              <label for="newName">Name</label>
+              <input type="text" class="form-control" id="newName" value="Elia Miho Mands">
+            </div>
+            <div class="form-group">
+              <label for="newNumber">Number:</label>
+              <input type="tel" class="form-control" id="newNumber" value="15295768771">
+            </div>
+            <div class="form-group">
+              <label for="newNumber">Address:</label>
+              <input type="text" class="form-control" id="newAddress" value="9 Helena Avenue">
+            </div>
+            <div class="form-group">
+              <label for="newNumber">Email:</label>
+              <input type="email" class="form-control" id="newEmail" value="elia@gmail.com">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-success btn-block">Add Contact</button>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"
+          data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<br>
+  <div class="row">
+    <table class="table sortable" id="table1">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Number</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="todoList">
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <table class="table hidden">
+      <thead>
+        <tr>
+          <th>image</th>
+          <th>name</th>
+          <th>number</th>
+          <th>address</th>
+          <th>email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="templateRow">
+          <td class="mainTable"><img src="https://image.freepik.com/free-icon/notebook-of-contacts_318-62400.png" alt="" border='3' height='30' width='auto' /></td>
+          <td contenteditable class="mainTable name"></td>
+          <td contenteditable class="mainTable number"></td>
+          <td contenteditable class="mainTable address"></td>
+          <td contenteditable class="mainTable email"></td>
+          <td>
+            <button class="mainTable btn btn-sm btn-danger delete">X</button>
+          </td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<script src="dataTables.js"></script>
+
+</body>
+</html>
